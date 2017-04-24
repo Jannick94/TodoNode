@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Your todo's
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list no-lines>
+    <button ion-item *ngFor="let todo of todos" (click)="toggleState(todo)">
+      <span item-left [class]="todo.done ? 'text-strike' : ''">
+        {{ todo.text }}
+      </span>
+      <span item-right [class]="todo.done ? 'text-strike' : ''">
+        {{ todo.date | date:"dd-MM-yyyy" }}
+      </span>
+    </button>
+  </ion-list>
+
+  <ion-fab right bottom>
+    <button ion-fab color="primary" (click)="openAddTodo()">
+      <ion-icon name="add"></ion-icon>
+    </button>
+  </ion-fab>
+</ion-content>

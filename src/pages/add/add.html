@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Add Todo</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <form (ngSubmit)="addTodo(todo)">
+    <ion-list>
+      <ion-item class="no-padding">
+        <ion-label floating>What do you have todo?</ion-label>
+        <ion-input type="text" [(ngModel)]="todo.text" name="todoText"></ion-input>
+      </ion-item>
+
+      <ion-item class="no-padding">
+        <ion-label floating>On what date do you need to do this?</ion-label>
+        <ion-datetime displayFormat="YYYY/MM/DD" [(ngModel)]="todo.date" name="todoDate"></ion-datetime>
+      </ion-item>
+
+      <button ion-button type="submit" class="submit-btn">Add Todo</button>
+    </ion-list>
+  </form>
+</ion-content>

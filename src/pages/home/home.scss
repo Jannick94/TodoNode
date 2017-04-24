@@ -1,0 +1,12 @@
+page-home {
+
+}
+
+.text-strike:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    left: 16px;
+    border-top: 1px solid #333;
+}
